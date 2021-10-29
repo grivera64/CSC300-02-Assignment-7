@@ -16,58 +16,42 @@ public class InfixToPostfixConverter {
     /* A helper method that checks if the provided character was one of the valid operators */
     public static boolean isOperator(char c) {
 
-        return switch (c) {                                         // (!) Preview Feature for JDK-13 and below, use
-                                                                    // --enable-preview --release 13 flags to run
-            case '^', '*', '/', '%', '+', '-' -> true;
-            default -> false;
+        /* If the above code doesn't work, comment it out and uncomment the code below */
+        switch (c) {
 
-        };
+            case '^':
+            case '*':
+            case '/':
+            case '%':
+            case '+':
+            case '-':
+                return true;
+            default:
+                return false;
 
-//        /* If the above code doesn't work, comment it out and uncomment the code below */
-//        switch (c) {
-//
-//            case '^':
-//            case '*':
-//            case '/':
-//            case '%':
-//            case '+':
-//            case '-':
-//                return true;
-//            default:
-//                return false;
-//
-//        }
+        }
 
     }
 
     /* A helper method to calculate precedence levels of an operator */
     public static int calculatePrecedenceLevel(char operator) {
 
-        return switch (operator) {                                  // (!) Preview Feature for JDK-13 and below, use
-                                                                    // --enable-preview --release 13 flags to run
-            case '^' -> 3;
-            case '*', '/', '%' -> 2;
-            case '+', '-' -> 1;
-            default -> throw new IllegalArgumentException("Argument must be a valid operator");
+        /* If the above code doesn't work, comment it out and uncomment the code below */
+        switch (operator) {
 
-        };
+            case '^':
+                return 3;
+            case '*':
+            case '/':
+            case '%':
+                return 2;
+            case '+':
+            case '-':
+                return 1;
+            default:
+                throw new IllegalArgumentException("Argument must be a valid operator");
 
-//        /* If the above code doesn't work, comment it out and uncomment the code below */
-//        switch (operator) {
-//
-//            case '^':
-//                return 3;
-//            case '*':
-//            case '/':
-//            case '%':
-//                return 2;
-//            case '+':
-//            case '-':
-//                return 1;
-//            default:
-//                throw new IllegalArgumentException("Argument must be a valid operator");
-//
-//        }
+        }
 
     }
 
