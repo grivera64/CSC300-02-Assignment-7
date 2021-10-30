@@ -59,7 +59,7 @@ public class LinkedListSortGenericTester {
 
             for (int j = 0; j < 3; j++) {
 
-                substr.append((char) randy.nextInt(65, 91));
+                substr.append((char) (randy.nextInt(26) + 65));
 
             }
 
